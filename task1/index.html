@@ -1,31 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>registration</title>
-</head>
-<body>
-  <!-- container -->
-  <div class="container">
-    <!-- login -->
-    <div class="login">
-      <!-- left-side-image -->
-      <div class="login-image">
-        <img src="./assets/images/login.jpg" alt="login-image">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>registration</title>
+  </head>
+  <body>
+    <!-- container -->
+    <div class="container">
+      <!-- login -->
+      <div class="login">
+        <!-- left-side-image -->
+        <div class="login-image">
+          <img src="./assets/images/login.jpg" alt="login-image" />
+        </div>
+        <!-- input form  -->
+        <div class="form-group">
+          <h1>Registration</h1>
+          <div class="form-input">
+            <!-- row 1 -->
+            <div class="row">
+              <div class="row-col1">
+                <label class="d-block" for="fullname">Full Name</label>
+                <input type="text" id="fullname" />
+              </div>
+              <div class="row-col2">
+                <label class="d-block" for="position"
+                  >Position you are applying for</label
+                >
+                <input type="text" id="position" />
+              </div>
+            </div>
+            <!-- row 2 -->
+            <div class="row">
+              <div class="row-col1">
+                <label class="d-block" for="email">Email</label>
+                <input type="email" id="email" />
+              </div>
+              <div class="row-col2">
+                <label class="d-block" for="phonenumber">Phone Number</label>
+                <input type="number" id="phonenumber" />
+              </div>
+            </div>
+            <!-- row 3 -->
+            <div class="row">
+              <div class="row-col1">
+                <label class="d-block" for="country">Country</label>
+                <input type="text" id="country" />
+              </div>
+              <div class="row-col2">
+                <label class="d-block" for="city">City</label>
+                <input type="text" id="city" />
+              </div>
+            </div>
+            <!-- row 4 -->
+            <div class="row">
+              <div class="row-col1">
+                <label class="d-block" for="password">Password</label>
+                <input type="password" id="password" />
+              </div>
+              <div class="row-col2">
+                <label class="d-block" for="confirmpassword"
+                  >Confirm Password</label
+                >
+                <input type="password" id="confirmpassword" />
+              </div>
+            </div>
+            <!-- row 5 Gender -->
+            <div class="gender">
+              <label class="d-block" for="">Gender</label>
+              <div class="d-flex">
+                <div>
+                  <input type="radio" id="male" name="gender" />
+                  <label for="male">Male</label>
+                </div>
+                <div>
+                  <input type="radio" id="female" name="gender" />
+                  <label for="male">Female</label>
+                </div>
+                <div>
+                  <input type="radio" id="other" name="gender" />
+                  <label for="other">Other</label>
+                </div>
+                <div>
+                  <input type="radio" id="prefernottosay" name="gender" />
+                  <label for="prefernottosay">Prefer not to say</label>
+                </div>
+              </div>
+            </div>
 
+            <!-- row 6 button  -->
+            <div><button>Next Step</button></div>
+
+            <!-- row 7 Already have an account ? Sign in  -->
+            <div>Already have an account? <a href="#">Sign in</a></div>
+            
+          </div>
+        </div>
       </div>
-      <!-- input form  -->
-      <div class="form">
-
-      </div>
-      
-
     </div>
-
-  </div>
-  
-</body>
+  </body>
 </html>

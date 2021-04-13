@@ -33,3 +33,52 @@ img {
   width: 100%;
   height: auto;
 }
+
+.form-group{
+  margin: 10px 50px;
+  width: 60%;
+
+}
+.form-group h1{
+  margin: 0 0 20px 0;
+}
+.d-block{
+  display: block;
+}
+.d-flex{
+  display: flex;
+  justify-content: space-between;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.row-col1{
+  width: 48%;
+}
+
+.row-col2{
+  width: 48%;
+}
+.row input{
+  width: 100%;
+}
+.gender{
+  
+}
+label{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+button{
+  border-radius: 15px;
+  background-color: #0e49b5;
+  color: #fff;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #0e49b5;
+  outline: none;
+  margin: 10px 0;
+}
