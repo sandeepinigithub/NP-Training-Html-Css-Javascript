@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 0, 0, 0),
+    rgb(21, 62, 144)
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  background-color: #ffffff;
+  height: 75%;
+  width: 90%;
+  display: flex;
+}
+.login-image {
+  /* background-color: blueviolet; */
+  width: 40%;
+  height: auto;
+  display: flex;
+}
+img {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
