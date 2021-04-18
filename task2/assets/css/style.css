@@ -6,6 +6,10 @@
 html {
   width: auto;
 }
+body{
+    position: relative;
+    display: block;
+}
 
 /* --------Header CSS-------- */
 .header {
@@ -47,16 +51,73 @@ html {
 .main {
 }
 .landing-image {
+    position:relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   overflow: hidden;
 }
+.main-content {
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  width: 100%;
+}
+.l-box {
+  height: 80%;
+  width: 30%;
+  border: 1px solid blue;
+  padding-right: 10px;
+}
+.r-box {
+    margin-left: 20px;
+  height: 80%;
+  width: 60%;
+  border: 1px solid blue;
+}
+.t-heading{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    
+}
+.t-heading h2{
+    margin-left: 5px;
+}
+.t-time{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    color: #A6ADB4;
+    margin-top: 10px;
+
+}
+.testimonials{
+    margin-bottom: 20px;
+}
+.testimonials > p{
+    font-style: italic;
+}
+.t-postImage{
+    position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
 
 /* --------Footer CSS-------- */
 .footer {
+  position: relative;
   height: 200px;
+  width: 100%;
   background-color: #a6adb4;
   display: flex;
   justify-content: space-around;
@@ -113,5 +174,5 @@ html {
   text-decoration: none;
   font-size: 13px;
   font-weight: bold;
-  color: #CBD0D3;
+  color: #cbd0d3;
 }
