@@ -6,9 +6,9 @@
 html {
   width: auto;
 }
-body{
-    position: relative;
-    display: block;
+body {
+  position: relative;
+  display: block;
 }
 
 /* --------Header CSS-------- */
@@ -51,66 +51,96 @@ body{
 .main {
 }
 .landing-image {
-    position:relative;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   overflow: hidden;
 }
+.title-image {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.story {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.author {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
 .main-content {
-  position:relative;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   height: auto;
   width: 100%;
+  margin: 20px 0;
 }
 .l-box {
   height: 80%;
   width: 30%;
-  border: 1px solid blue;
   padding-right: 10px;
 }
 .r-box {
-    margin-left: 20px;
+  margin-left: 20px;
   height: 80%;
   width: 60%;
-  border: 1px solid blue;
+  border-left-color:#EBEDED ;
+  border-left-style: solid;
+  border-left-width: 2px;
+  padding: 20px;
 }
-.t-heading{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    
+.m-detail {
+  color: #a6adb4;
+  size: 14px;
+  margin: 20px 0;
+  border-bottom-style: dashed;
+  border-bottom-color: #ebeded;
+  border-bottom-width: 2px;
+  padding: 0 0 20px 0;
 }
-.t-heading h2{
-    margin-left: 5px;
+.t-heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
 }
-.t-time{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    color: #A6ADB4;
-    margin-top: 10px;
-
+.t-heading h2 {
+  margin-left: 5px;
 }
-.testimonials{
-    margin-bottom: 20px;
+.t-time {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  color: #a6adb4;
+  margin-top: 10px;
 }
-.testimonials > p{
-    font-style: italic;
+.testimonials {
+  margin-bottom: 20px;
 }
-.t-postImage{
-    position:relative;
+.testimonials > p {
+  font-style: italic;
+}
+.t-postImage {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   overflow: hidden;
   margin-top: 20px;
+}
+.t-time a {
+  color: #a6adb4;
+  font-style: italic;
 }
 
 /* --------Footer CSS-------- */
