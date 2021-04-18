@@ -64,6 +64,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.title-image img{
+  width: 100%;
+}
 .story {
   position: absolute;
   bottom: 20px;
@@ -224,3 +227,4 @@ body {
   font-weight: bold;
   color: #cbd0d3;
 }
+
