@@ -92,7 +92,7 @@ body {
   margin-left: 20px;
   height: 80%;
   width: 60%;
-  border-left-color:#EBEDED ;
+  border-left-color: #ebeded;
   border-left-style: solid;
   border-left-width: 2px;
   padding: 20px;
@@ -186,10 +186,28 @@ body {
 }
 .box2 input {
   border: 2px solid #ffffff;
-  border-radius: 6px;
+  border-right: 0px;
+  border-radius: 6px 0 0 6px;
+  outline: none;
   opacity: 0.1;
-  width: 262px;
+  width: 242px;
   height: 40px;
+  background-color: #a6adb4;
+}
+.box2-mailSend {
+  display: flex;
+}
+.box2-send {
+  border: 2px solid rgba(255, 255, 255,0.1);
+  border-left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 6px 6px 0;
+  background-color: #a6adb4;
+  height: 40px;
+  width: max-content;
+  padding-right: 20px;
 }
 .box3 {
   /* border: 1px solid blue; */
