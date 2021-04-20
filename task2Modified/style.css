@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* -------------- Header CSS --------------  */
+/* -------------- Navigation Bar --------------  */
+nav {
+  background-color: #f6f8f9;
+  padding: 15px;
+}
+nav a {
+  text-decoration: none;
+  color: #343638;
+  opacity: 0.5;
+}
+nav .menu {
+  list-style: none;
+}
+.logo a {
+  color: #fa6980;
+  font-size: 1.25em;
+  opacity: 1;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar {
+  order: 1;
+}
+.item {
+  order: 2;
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* -------------- Main CSS --------------  */
+.banner {
+  position: relative;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+.banner-text {
+  /* parent of .banner-text is .banner */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.banner img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.d-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.d-block {
+  display: block;
+}
+.d-flex span {
+  font-weight: lighter;
+  font-size: 0.7em;
+}
+
+.banner-author {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  font-size: 1;
+  text-transform: capitalize;
+}
+.banner-author img {
+  height: 1.2em;
+  width: 1.2em;
+  margin-right: 0.5em;
+}
+
+.banner-story {
+  margin: 1em auto;
+  text-align: center;
+  border: 1px dashed #343638;
+}
+.next-button {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1em 0;
+  color: #fa6980;
+}
+.content-container {
+  background-color: #f6f8f9;
+}
+.d-bborder {
+  border-bottom-color: #ebeded;
+  border-bottom-style: dashed;
+  border-bottom-width: 2px;
+  margin: 1em 0;
+}
+.d-greyColor {
+  color: #a6adb4;
+}
+.d-greyColor.d-flex {
+  justify-content: flex-start;
+}
+.d-mbottom {
+  margin-bottom: 0.8em;
+}
+.d-pbottom {
+    padding-bottom: 0.8em;
+  }
+
+.r-dataTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.lr-separator {
+  width: 60%;
+  border-bottom-color: #ebeded;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+
+/* -------------- Footer CSS --------------  */
+
+footer {
+  background-color: #a6adb4;
+}
+.fmenu a,
+li {
+  text-decoration: none;
+  color: #fff;
+  list-style: none;
+}
+.flogo a {
+  text-decoration: none;
+  color: #fa6980;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 0.5em 0.5em;
+}
+.feedback > span {
+    font-size: 0.6em;
+}
+.social-link a{
+    text-decoration: none;
+    color: #fff;
+}
+.feedback{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
