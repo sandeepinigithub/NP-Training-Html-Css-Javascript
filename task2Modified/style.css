@@ -113,6 +113,7 @@ nav .menu {
 }
 .content-container {
   background-color: #f6f8f9;
+  padding: 0 1em;
 }
 .d-bborder {
   border-bottom-color: #ebeded;
@@ -142,6 +143,7 @@ nav .menu {
   display: block;
   max-width: 100%;
   height: auto;
+  padding: 0 0 1em 0;
   
 }
 
