@@ -8,6 +8,11 @@ body {
   font-size: 16px;
 }
 
+
+/* ------------------------- MOBILE VIEW -------------------------  */
+
+
+
 /* -------------- Header CSS --------------  */
 /* -------------- Navigation Bar --------------  */
 nav {
@@ -122,8 +127,8 @@ nav .menu {
   margin-bottom: 0.8em;
 }
 .d-pbottom {
-    padding-bottom: 0.8em;
-  }
+  padding-bottom: 0.8em;
+}
 
 .r-dataTitle {
   display: flex;
@@ -156,15 +161,64 @@ li {
   margin: 0.5em 0.5em;
 }
 .feedback > span {
-    font-size: 0.6em;
+  font-size: 0.6em;
+  color: #fff;
 }
-.social-link a{
-    text-decoration: none;
-    color: #fff;
+/* -------------- Input with icon CSS --------------  */
+input[type="text"] {
+  width: 100%;
+  border: 2px solid #a6adb4;;
+  border-radius: 6px;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 0.5em;
 }
-.feedback{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+input[type="text"]:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0.5em 0 #fff;
 }
+
+.inputWithIcon input[type="text"] {
+  padding-right: 40px;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.inputWithIcon i {
+  position: absolute;
+  right: 0;
+  top: 0.5em;
+  padding: 0.5em;
+  color: #a6adb4; /* icon is just like text it  color will chnage */
+}
+
+.inputWithIcon input[type="text"]:focus + i {
+  color: #fa6980;;
+}
+
+
+/* -------------- Input with icon CSS End --------------  */
+
+/* -------------- social link  CSS --------------  */
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link a {
+  text-decoration: none;
+  color: #fff;
+  padding: 1em;
+}
+.feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ------------------------- MOBILE VIEW END -------------------------  */
