@@ -38,6 +38,9 @@ nav .menu {
   justify-content: space-between;
   align-items: center;
 }
+.toggle{
+  display: none;
+}
 
 .avatar {
   order: 1;
