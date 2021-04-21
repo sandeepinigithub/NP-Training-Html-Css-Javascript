@@ -135,6 +135,13 @@ nav .menu {
   align-items: center;
   justify-content: flex-start;
 }
+.r-dataImage{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  
+}
+
 .lr-separator {
   width: 60%;
   border-bottom-color: #ebeded;
