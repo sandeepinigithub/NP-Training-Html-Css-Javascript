@@ -14,23 +14,33 @@ body {
 
 
 /* -------------- Header CSS --------------  */
+
+
 /* -------------- Navigation Bar --------------  */
 nav {
-  background-color: #f6f8f9;
-  padding: 15px;
+  background: #a6adb4;
+  padding: 0 15px;
 }
-nav a {
+a {
+  color: #fff;
   text-decoration: none;
-  color: #343638;
-  opacity: 0.5;
 }
-nav .menu {
-  list-style: none;
+.menu{
+  list-style-type: none;
 }
-.logo a {
+.logo {
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+}
+.logo a{
   color: #fa6980;
-  font-size: 1.25em;
-  opacity: 1;
+}
+.item {
+  padding: 10px;
+}
+.item a:hover
+ {
+  color: #ccc;
 }
 .menu {
   display: flex;
@@ -38,21 +48,28 @@ nav .menu {
   justify-content: space-between;
   align-items: center;
 }
-.toggle{
-  display: none;
+.menu li a {
+  display: block;
+  padding: 15px 5px;
 }
-
-.avatar {
+.toggle {
   order: 1;
+  font-size: 20px;
 }
 .item {
   order: 2;
   width: 100%;
   text-align: center;
-  margin: 5px 0;
+  display: none;
+}
+.active .item {
+  display: block;
 }
 
+
+
 /* -------------- Main CSS --------------  */
+
 .banner {
   position: relative;
   font-size: 0.8em;
@@ -165,12 +182,19 @@ li {
   color: #fff;
   list-style: none;
 }
+.fmenu .item{
+  display: block;
+}
+.flogo{
+  padding: 1em;
+}
 .flogo a {
   text-decoration: none;
   color: #fa6980;
   font-size: 1.25em;
   font-weight: bold;
-  margin: 0.5em 0.5em;
+
+
 }
 .feedback > span {
   font-size: 0.6em;
@@ -211,9 +235,6 @@ input[type="text"]:focus {
   color: #fa6980;;
 }
 
-
-/* -------------- Input with icon CSS End --------------  */
-
 /* -------------- social link  CSS --------------  */
 .social-link {
   display: flex;
@@ -233,4 +254,35 @@ input[type="text"]:focus {
   flex-direction: column;
 }
 
-/* ------------------------- MOBILE VIEW END -------------------------  */
+
+/* ------------------------- DESKTOP VIEW -------------------------  */
+
+
+@media all and (min-width: 700px) {
+  /* Desktop menu */
+  .menu {
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+  }
+  .logo {
+    flex: 1;
+    order: 0;
+  }
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+  }
+
+
+  .toggle {
+    flex: 1;
+    text-align: right;
+    order: 2;
+    display: none;
+  }
+
+}

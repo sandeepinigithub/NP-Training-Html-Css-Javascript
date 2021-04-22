@@ -1,29 +1,19 @@
-var dropDown = false;
+const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
 
-function toggle() {
-  
-  if (!dropDown) {
-        dropDown = true;
-        document.querySelectorAll(".toggle")[0].style.display = "initial";
-        document.querySelectorAll(".toggle")[1].style.display = "initial";
-        document.querySelectorAll(".toggle")[2].style.display = "initial";
-        document.querySelectorAll(".toggle")[3].style.display = "initial";
-    
+/* Toggle mobile menu */
+function toggleMenu() {
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+    toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+  } else {
+    menu.classList.add("active");
+    toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
   }
-  else 
-    closetoggle();
 }
 
-function closetoggle(){
-    if(dropDown){
-        dropDown = false ;
-        document.querySelectorAll(".toggle")[1].style.display = "none";
-        document.querySelectorAll(".toggle")[2].style.display = "none";
-        document.querySelectorAll(".toggle")[3].style.display = "none";
-        document.querySelectorAll(".toggle")[0].style.display = "none";
 
-    }
-    
+/* Event Listeners */
+toggle.addEventListener("click", toggleMenu);
 
-}
  
