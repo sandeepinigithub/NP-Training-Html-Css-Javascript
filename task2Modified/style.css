@@ -118,7 +118,8 @@ a {
 }
 
 .banner-story {
-  margin: 1em auto;
+  margin: 1em 1em;
+  padding: 0.5em;
   text-align: center;
   border: 1px dashed #343638;
 }
@@ -136,7 +137,7 @@ a {
   border-bottom-color: #ebeded;
   border-bottom-style: dashed;
   border-bottom-width: 2px;
-  margin: 1em 0;
+  margin: 1em 1em;
 }
 .d-greyColor {
   color: #a6adb4;
@@ -284,5 +285,28 @@ input[type="text"]:focus {
     order: 2;
     display: none;
   }
+  .content-container{
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+  }
+  .lr-separator{
+    display: none;
+  }
+  .r-content{
+    border-left-width: 2px ;
+    border-left-color:#ebeded;
+    border-left-style:solid ;
+    padding-left: 1em;
+  }
+  .l-content{
+    width: 40%;
+    padding: 0 1em;
+  }
+  .banner-text{
+    font-size: 2em;
+  }
+  
+
 
 }
