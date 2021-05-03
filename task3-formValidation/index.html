@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="formContainer">
+        <div class="formContainer__element">
+            <h1>Details</h1>
+            <form action="">
+                <!-- Name  -->
+                <div class="formContainer__element__formGroup">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+                </div>
+                <!-- Email  -->
+                <div class="formContainer__element__formGroup">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" />
+                </div>
+                <!-- Date of birth  -->
+                <div class="formContainer__element__formGroup">
+                    <label for="dob">Date of birth</label>
+                    <input type="date" name="date" id="date" />
+                </div>
+                <!-- Gender -->
+                <div class="formContainer__element__formGroup">
+                    <label for="gender">Gender</label>
+                    <div class="formContainer__element__gender">
+                        <div>
+                            <input type="radio" name="gender" id="male" />
+                            <label for="male">Male</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" id="female" />
+                            <label for="female">Female</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" id="transgender" />
+                            <label for="transgender">Transgender</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Marital Status  -->
+                <div class="formContainer__element__formGroup">
+                    <label for="maritalstatus">Marital Status</label>
+                    <select name="maritalstatus" id="maritalstatus">
+                        <option value="married">Married</option>
+                        <option value="unmarried">Unmarried</option>
+
+                    </select>
+                </div>
+                <!-- button  -->
+                <div class="formContainer__element__btn">
+                    <button class="btn">Previous</button>
+                    <button class="btn">Next</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
