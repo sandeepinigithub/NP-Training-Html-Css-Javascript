@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
+  margin: 16px 0;
   width: 100vw;
 }
 .formContainer__element {
@@ -43,7 +43,8 @@ body {
 }
 input[type="text"],
 input[type="email"],
-input[type="date"],select {
+input[type="date"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -52,10 +53,18 @@ input[type="date"],select {
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="date"]:focus {
-    outline: none;
-  /* outline-color: #fa6980; */
-  box-shadow: 1px 1px 5px 2px #fa6980
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  box-shadow: 1px 1px 5px 2px #fa6980;
+}
+select {
+  appearance: none; /* Remove default arrow */
+  background-image: url("./images/downArrow-select.svg"); /* Add custom arrow */
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #fff;
 }
 .btn {
   background-color: #fa6980;
