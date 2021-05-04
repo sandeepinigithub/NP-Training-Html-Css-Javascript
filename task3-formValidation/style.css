@@ -6,9 +6,7 @@
 body {
   font-size: 16px;
 }
-
 .formContainer {
-  background-color: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,17 +16,19 @@ body {
 .formContainer__element {
   position: relative;
   background-color: #ffffff;
-  padding: 8px;
-  margin: 16px 8px;
-  height: 90%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
+}
+.formContainer__element__formGroup{
+  margin: 0 16px;
+
 }
 .formContainer__element h1 {
   text-align: center;
 }
 
-.formContainer__element__btn {
-  margin-top: 16px;
+.prevnextbtn {
+  margin: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -41,9 +41,7 @@ body {
   margin: 8px 0;
   padding: 12px 20px;
 }
-input[type="text"],
-input[type="email"],
-input[type="date"],
+input,
 select {
   width: 100%;
   padding: 12px 20px;
@@ -51,9 +49,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="date"]:focus,
+input:focus,
 select:focus {
   outline: none;
   box-shadow: 1px 1px 5px 2px #fa6980;
@@ -72,7 +68,7 @@ select {
   border-radius: 16px;
   outline: none;
   text-align: center;
-  padding: 5px 10px;
+  padding: 10px 20px;
   cursor: pointer;
   color: #fff;
 }
