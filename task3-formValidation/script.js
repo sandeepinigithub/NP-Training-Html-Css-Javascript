@@ -1,6 +1,7 @@
 let slides = document.getElementsByClassName("mySlides");
 let prev = document.querySelector(".prev");
 let next = document.querySelector(".next");
+console.log(slides);
 
 if (!slides.length == 0) {
     let slideIndex = 1;
@@ -15,12 +16,22 @@ if (!slides.length == 0) {
     };
 
     function showSlides(n) {
-        if (n > slides.length) {
-            slideIndex = 1;
+        if (n == slides.length) {
+            document.getElementsByClassName('next')[0].style.display = "none";
+            document.getElementsByClassName('submit')[0].style.display = "initial"
+
+            // slideIndex = 1;
+        }
+        if (!(n == slides.length)) {
+            document.getElementsByClassName('next')[0].style.display = "initial";
+            document.getElementsByClassName('submit')[0].style.display = "none"
+
+            // slideIndex = 1;
         }
 
+
         if (n < 1) {
-            slideIndex = slides.length;
+            slideIndex = 1
         }
 
         for (i = 0; i < slides.length; i++) {

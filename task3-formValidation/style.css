@@ -76,3 +76,20 @@ select {
   background-color: #af4959;
   border: 1px solid #af4959;
 }
+.submit{
+  display: none;
+  border: 1px solid #fa6980;
+  background-color: #fff;
+  outline: none;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #fa6980;
+
+}
+.submit:hover{
+  background-color: #af4959;
+  border: 1px solid #af4959;
+  color: #fff;
+
+}
