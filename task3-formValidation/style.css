@@ -95,6 +95,25 @@ select {
 }
 #printContainer{
   display : none;
+  
+}
+.printContainer__design{
   border: 1px solid #fa6980;
   border-radius: 8px;
+  padding: 4px 16px;
+  margin: 4px;
+  font-weight: bold;
+
+}
+.printContainer__design span{
+  font-style: italic;
+  font-weight: lighter;
+  font-size: smaller;
+}
+.printContainer__design h3{
+  text-align: center;
+  margin: 8px 0;
+  font-weight: lighter;
+  font-style: oblique;
+  color: #fa6980;
 }

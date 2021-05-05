@@ -50,23 +50,23 @@ function getValue(){
     // let gender = document.querySelector('input[name="gender"]:checked').value
     // let maritalstatus = document.getElementById('maritalstatus').value;
 
-    let rollno = document.getElementById('rollno').value;
-    let course = document.getElementById('course').value;
-    let branch = document.getElementById('branch').value;
-    let currentsemester = document.getElementById('currentsemester').value;
-    let college = document.getElementById('college').value;
+    // let rollno = document.getElementById('rollno').value;
+    // let course = document.getElementById('course').value;
+    // let branch = document.getElementById('branch').value;
+    // let currentsemester = document.getElementById('currentsemester').value;
+    // let college = document.getElementById('college').value;
 
-    let address = document.getElementById('address').value;
-    let city = document.getElementById('city').value;
-    let state = document.getElementById('state').value;
-    let zipcode = document.getElementById('zipcode').value;
-    let country = document.getElementById('country').value;
+    // let address = document.getElementById('address').value;
+    // let city = document.getElementById('city').value;
+    // let state = document.getElementById('state').value;
+    // let zipcode = document.getElementById('zipcode').value;
+    // let country = document.getElementById('country').value;
 
-    let occupationtype = document.getElementById('occupationtype').value;
-    let occupationstatus = document.getElementById('occupationstatus').value;
-    let employername = document.getElementById('employername').value;
-    let startdate = document.getElementById('startdate').value;
-    let designation = document.getElementById('designation').value;    
+    // let occupationtype = document.getElementById('occupationtype').value;
+    // let occupationstatus = document.getElementById('occupationstatus').value;
+    // let employername = document.getElementById('employername').value;
+    // let startdate = document.getElementById('startdate').value;
+    // let designation = document.getElementById('designation').value;    
     // console.log(name,email,date,gender,maritalstatus,rollno,course,branch,currentsemester,college,address,city,state,zipcode,country,occupationtype,occupationstatus,employername,startdate,designation);
 
     slides[3].style.display = "none";
@@ -81,8 +81,9 @@ function setValue(){
     document.getElementById('nameValue').innerHTML = document.getElementById('name').value;
     document.getElementById('emailValue').innerHTML = document.getElementById('email').value;
     document.getElementById('dateValue').innerHTML = document.getElementById('date').value;
-    // document.getElementById('genderValue').innerHTML = document.getElementById('gender').value;
+    document.getElementById('genderValue').innerHTML = document.querySelector('input[name="gender"]:checked').value
     // document.getElementById('maritalstatusValue').innerHTML = document.getElementById('maritalstatus').value;
+    console.log("This value is not accepted in innerHtML of Select Tag: "+ document.getElementById('maritalstatus').value);
 
     document.getElementById('rollnoValue').innerHTML = document.getElementById('rollno').value;
     document.getElementById('courseValue').innerHTML = document.getElementById('course').value;
