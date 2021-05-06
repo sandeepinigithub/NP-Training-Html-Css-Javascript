@@ -3,6 +3,7 @@ let prev = document.querySelector(".prev");
 let next = document.querySelector(".next");
 let submit = document.querySelector(".submit");
 let print = document.querySelector(".print");
+let form = document.getElementById('form');
 
 
 if (!slides.length == 0) {
@@ -43,7 +44,7 @@ if (!slides.length == 0) {
         slides[slideIndex - 1].style.display = "block";
     }
 }
-function getValue(){
+function getValue() {
     // let name = document.getElementById('name').value;
     // let email = document.getElementById('email').value;
     // let date = document.getElementById('date').value;
@@ -77,13 +78,13 @@ function getValue(){
     document.getElementById('printContainer').style.display = "initial";
 
 }
-function setValue(){
+function setValue() {
     document.getElementById('nameValue').innerHTML = document.getElementById('name').value;
     document.getElementById('emailValue').innerHTML = document.getElementById('email').value;
     document.getElementById('dateValue').innerHTML = document.getElementById('date').value;
     document.getElementById('genderValue').innerHTML = document.querySelector('input[name="gender"]:checked').value
     // document.getElementById('maritalstatusValue').innerHTML = document.getElementById('maritalstatus').value;
-    console.log("This value is not accepted in innerHtML of Select Tag: "+ document.getElementById('maritalstatus').value);
+    console.log("This value is not accepted in innerHtML of Select Tag: " + document.getElementById('maritalstatus').value);
 
     document.getElementById('rollnoValue').innerHTML = document.getElementById('rollno').value;
     document.getElementById('courseValue').innerHTML = document.getElementById('course').value;
@@ -104,16 +105,34 @@ function setValue(){
     document.getElementById('designationValue').innerHTML = document.getElementById('designation').value;
 
 }
-function printValue(){
-    window.print();    
+function printValue() {
+    window.print();
 }
 
+//Form Validation 
+form.addEventListener('focusout',errorInput);
+//Function Error Input
+function errorInput(){
+    let x = document.getElementsByClassName('error');
+    console.log(form);
+    if(document.getElementById('name').value == ""){
+        x[0].style.display = "inline-block" ; 
+    }
+    if(document.getElementById('email').value == ""){
+        x[1].style.display = "inline-block" ; 
+    }
+    if(document.getElementById('date').value == ""){
+        x[2].style.display = "inline-block" ; 
+    }  
+}
+//previous button
 prev.addEventListener("click", () => {
     plusSlides(-1);
 });
-
+//next button
 next.addEventListener("click", () => {
     plusSlides(1);
 });
+//submit button
 submit.addEventListener("click", getValue);
 print.addEventListener("click", printValue);

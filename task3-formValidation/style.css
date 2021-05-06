@@ -117,3 +117,8 @@ select {
   font-style: oblique;
   color: #fa6980;
 }
+.error{
+  color: red;
+  margin: 0 0 16px 0;
+  display: none;
+}
