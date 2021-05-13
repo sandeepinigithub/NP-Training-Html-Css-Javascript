@@ -116,14 +116,9 @@ function validate(inputID) {
 
         isError = true;
     }
-    else if (inputID == "dob") {
-        if (input.value == "") {
-            setError("erDob", "Please enter your Date of birth");
-        }
-        else {
-            setError("erDob", "");
-        }
+    else if (input.value == "" && inputID == "dob") {
 
+        setError("erDob", "Please enter your Date of birth");
         isError = true;
     }
 
@@ -135,7 +130,6 @@ function validate(inputID) {
         else {
             setError("erRollno", "");
         }
-
         isError = true;
     }
     else if (inputID == "course") {
@@ -145,7 +139,6 @@ function validate(inputID) {
         else {
             setError("erCourse", "");
         }
-
         isError = true;
     }
     else if (inputID == "branch") {
@@ -155,7 +148,6 @@ function validate(inputID) {
         else {
             setError("erBranch", "");
         }
-
         isError = true;
     }
     else if (inputID == "currentsemester") {
@@ -168,14 +160,9 @@ function validate(inputID) {
 
         isError = true;
     }
-    else if (inputID == "college") {
-        if (input.value == "") {
-            setError("erCollege", "Please enter your College Name");
-        }
-        else {
-            setError("erCollege", "");
-        }
+    else if (input.value == "" && inputID == "college") {
 
+        setError("erCollege", "Please enter your College Name");
         isError = true;
     }
 
@@ -183,56 +170,44 @@ function validate(inputID) {
 
     // step 3
     else if (inputID == "address") {
-        if (input.value == "") {
+        if(input.value == ""){
             setError("erAddress", "Please enter your Address");
-        }
-        else {
+        }  
+        else{
             setError("erAddress", "");
-        }
-
+        }      
         isError = true;
     }
     else if (inputID == "city") {
-        if (input.value == "") {
+        if(input.value == ""){
             setError("erCity", "Please enter your City");
-        }
-        else {
+        }    
+        else    
+        {
             setError("erCity", "");
         }
-
         isError = true;
     }
     else if (inputID == "state") {
-        if (input.value == "") {
+        if(input.value == ""){
             setError("erState", "Please enter your State");
         }
-        else {
+        else{
             setError("erState", "");
-        }
-
+        }        
         isError = true;
     }
     else if (inputID == "zipcode") {
-        if (input.value == "") {
+        if(input.value == ""){
             setError("erZipcode", "Please enter your Zipcode");
         }
-        else if (input.value != "" && input.value.length < 6) {
-            setError("erZipcode", "Please enter zipcode of valid length ");
-        }
-        else {
+        else{
             setError("erZipcode", "");
-        }
-
+        }        
         isError = true;
     }
-    else if (inputID == "country") {
-        if (input.value == "") {
-            setError("erCountry", "Please enter your Country");
-        }
-        else {
-            setError("erCountry", "");
-        }
-
+    else if (input.value == "" && inputID == "country") {
+        setError("erCountry", "Please enter your Country");
         isError = true;
     }
 
@@ -268,14 +243,9 @@ function validate(inputID) {
 
         isError = true;
     }
-    else if (inputID == "startdate") {
-        if (input.value == "") {
-            setError("erStartdate", "Please enter your startdate");
-        }
-        else {
-            setError("erStartdate", "");
-        }
+    else if (input.value == "" && inputID == "startdate") {
 
+        setError("erStartdate", "Please enter your startdate");
         isError = true;
     }
     else if (inputID == "designation") {
