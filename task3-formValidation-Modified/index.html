@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css File -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Adding custome fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+    <!-- Adding Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>form</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="step-indicator">
+                <ul>
+                    <li class="indicate1">Step 1</li>
+                    <li class="indicate2">Step 2</li>
+                    <li class="indicate3">Step 3</li>
+                    <li class="indicate4">Step 4</li>
+                </ul>
+            </div>
+            <div class="step step1">
+                <h1>Personal Details</h1>
+                <ul>
+                    <li><label for="name">Name*</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required />
+                        <span class="error" id="erName"></span>
+                    </li>
+                    <li><label for="email">Email*</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email"
+                            pattern=".+@globex.com" size="30" required />
+                        <span class="error" id="erEmail"></span>
+                    </li>
+                    <li><label for="dob">Date of birth*</label>
+                        <input type="date" name="dob" id="dob" placeholder="dd/mm/yyyy" required />
+                        <span class="error" id="erDob"></span>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <legend>Gender</legend>
+                            <input type="radio" name="gender" value="male" id="male" checked>
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" value="female" id="female">
+                            <label for="female">Female</label>
+                        </fieldset>
+                    </li>
+                    <li><label for="maritalstatus">Marital Status</label>
+                        <select name="maritalstatus" id="maritalstatus">
+                            <option value="Married">Married</option>
+                            <option value="Unmarried">Unmarried</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="step step2">
+                <h1>Academic Details</h1>
+                <ul>
+                    <li><label for="rollno">Roll No</label>
+                        <input type="number" name="rollno" id="rollno" placeholder="Enter your Roll No" required />
+                        <span class="error" id="erRollno"></span>
+                    </li>
+                    <li><label for="course">Course</label>
+                        <input type="text" name="course" id="course" placeholder="Enter your course" required />
+                        <span class="error" id="erCourse"></span>
+                    </li>
+                    <li> <label for="branch">Branch</label>
+                        <input type="text" name="branch" id="branch" placeholder="Enter your branch" required />
+                        <span class="error" id="erBranch"></span>
+                    </li>
+                    <li><label for="currentsemester">Current Semester</label>
+                        <input type="number" name="currentsemester" id="currentsemester"
+                            placeholder="Enter your Current Semester" required />
+                        <span class="error" id="erCurrentsemester"></span>
+                    </li>
+                    <li><label for="college">College</label>
+                        <input type="text" name="college" id="college" placeholder="College Name" required />
+                        <span class="error" id="erCollege"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="step step3">
+                <h1>Contact Details</h1>
+                <ul>
+                    <li><label for="address">Address</label>
+                        <input type="text" name="address" id="address" placeholder="Address" required />
+                        <span class="error" id="erAddress"></span>
+                    </li>
+                    <li> <label for="city">City</label>
+                        <input type="text" name="city" id="city" placeholder="City" required />
+                        <span class="error" id="erCity"></span>
+                    </li>
+                    <li><label for="state">State</label>
+                        <input type="text" name="state" id="state" placeholder="State" required />
+                        <span class="error" id="erState"></span>
+                    </li>
+                    <li><label for="zipcode">Zip Code</label>
+                        <input type="number" name="zipcode" id="zipcode" placeholder="Zip Code" required />
+                        <span class="error" id="erZipcode"></span>
+                    </li>
+                    <li><label for="country">Country</label>
+                        <input type="text" name="country" id="country" placeholder="Country" required />
+                        <span class="error" id="erCountry"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="step step4">
+                <h1>Occupation Information</h1>
+                <ul>
+                    <li><label for="occupationtype">Occupation Type</label>
+                        <input type="text" name="occupationtype" id="occupationtype" placeholder="Occupation Type"
+                            required />
+                            <span class="error" id="erOccupationtype"></span>
+                    </li>
+                    <li><label for="occupationstatus">Occupation Status</label>
+                        <input type="text" name="occupationstatus" id="occupationstatus" placeholder="Occupation Status"
+                            required />
+                            <span class="error" id="erOccupationstatus"></span>
+                    </li>
+                    <li><label for="employername">Employer Name</label>
+                        <input type="text" name="employername" id="employername" placeholder="Employer Name" required />
+                        <span class="error" id="erEmployername"></span>
+                    </li>
+                    <li><label for="startdate">Start Date</label>
+                        <input type="date" name="startdate" id="startdate" placeholder="Start Date" required />
+                        <span class="error" id="erStartdate"></span>
+                    </li>
+                    <li><label for="designation">Designation</label>
+                        <input type="text" name="designation" id="designation" placeholder="Designation" required />
+                        <span class="error" id="erDesignation"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="btnGroup">
+                <button class="btn prev" onclick="prev()"><i class="fas fa-chevron-circle-left"></i> Previous</button>
+                <button class="btn submit" onclick="next()">Submit <i class="fas fa-database"></i></button>
+                <button class="btn print">Print <i class="fas fa-print"></i></button>
+                <button class="btn next active" onclick="next()">Next <i
+                        class="fas fa-chevron-circle-right"></i></button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Script File -->
+    <script src="./javascript/script.js"></script>
+</body>
+
+</html>
