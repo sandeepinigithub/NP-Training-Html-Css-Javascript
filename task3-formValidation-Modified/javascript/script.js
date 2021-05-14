@@ -254,6 +254,7 @@ function validate(inputID) {
         }
         else {
             setError("erDesignation", "");
+            submitForm();
         }
 
         isError = true;
@@ -262,6 +263,50 @@ function validate(inputID) {
     else {
         isError = false;
     }
+}
+function setValue() {
+    document.getElementById('nameValue').innerHTML = document.getElementById('name').value;
+    document.getElementById('emailValue').innerHTML = document.getElementById('email').value;
+    document.getElementById('dateValue').innerHTML = document.getElementById('dob').value;
+    document.getElementById('genderValue').innerHTML = document.querySelector('input[name="gender"]:checked').value
+    // document.getElementById('maritalstatusValue').innerHTML = document.getElementById('maritalstatus').value;
+    console.log("This value is not accepted in innerHtML of Select Tag: " + document.getElementById('maritalstatus').value);
+
+    document.getElementById('rollnoValue').innerHTML = document.getElementById('rollno').value;
+    document.getElementById('courseValue').innerHTML = document.getElementById('course').value;
+    document.getElementById('branchValue').innerHTML = document.getElementById('branch').value;
+    document.getElementById('currentsemesterValue').innerHTML = document.getElementById('currentsemester').value;
+    document.getElementById('collegeValue').innerHTML = document.getElementById('college').value;
+
+    document.getElementById('addressValue').innerHTML = document.getElementById('address').value;
+    document.getElementById('cityValue').innerHTML = document.getElementById('city').value;
+    document.getElementById('stateValue').innerHTML = document.getElementById('state').value;
+    document.getElementById('zipcodeValue').innerHTML = document.getElementById('zipcode').value;
+    document.getElementById('countryValue').innerHTML = document.getElementById('country').value;
+
+    document.getElementById('occupationtypeValue').innerHTML = document.getElementById('occupationtype').value;
+    document.getElementById('occupationstatusValue').innerHTML = document.getElementById('occupationstatus').value;
+    document.getElementById('employernameValue').innerHTML = document.getElementById('employername').value;
+    document.getElementById('startdateValue').innerHTML = document.getElementById('startdate').value;
+    document.getElementById('designationValue').innerHTML = document.getElementById('designation').value;
+
+}
+function printValue() {
+    window.print();
+}
+
+function submitForm(){
+    steps.forEach(step => {
+        step.style.display = 'none';
+    });
+    prevBtn.style.display = "none";
+    nextBtn.style.display = "none";
+    submitBtn.style.display = "none";
+    printBtn.style.display = "block";
+    document.querySelector('.step-indicator').style.display = "none";
+    setValue();
+    document.querySelector('.printContainer').style.display = "block";
+    
 }
 
 

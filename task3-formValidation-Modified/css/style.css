@@ -108,6 +108,9 @@ select:focus {
     margin-bottom: 2rem;
     color: #ccc;
 }
+.printContainer{
+  display: none;
+}
 
 /* Mobile-View */
 @media only screen and (max-width: 500px) {

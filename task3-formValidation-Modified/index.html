@@ -8,13 +8,12 @@
     <!-- Css File -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Adding custome fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet" />
     <!-- Adding Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <title>form</title>
-
 </head>
 
 <body>
@@ -31,29 +30,33 @@
             <div class="step step1">
                 <h1>Personal Details</h1>
                 <ul>
-                    <li><label for="name">Name*</label>
+                    <li>
+                        <label for="name">Name*</label>
                         <input type="text" name="name" id="name" placeholder="Enter your name" required />
                         <span class="error" id="erName"></span>
                     </li>
-                    <li><label for="email">Email*</label>
+                    <li>
+                        <label for="email">Email*</label>
                         <input type="email" name="email" id="email" placeholder="Enter your email"
                             pattern=".+@globex.com" size="30" required />
                         <span class="error" id="erEmail"></span>
                     </li>
-                    <li><label for="dob">Date of birth*</label>
+                    <li>
+                        <label for="dob">Date of birth*</label>
                         <input type="date" name="dob" id="dob" placeholder="dd/mm/yyyy" required />
                         <span class="error" id="erDob"></span>
                     </li>
                     <li>
                         <fieldset>
                             <legend>Gender</legend>
-                            <input type="radio" name="gender" value="male" id="male" checked>
+                            <input type="radio" name="gender" value="male" id="male" checked />
                             <label for="male">Male</label>
-                            <input type="radio" name="gender" value="female" id="female">
+                            <input type="radio" name="gender" value="female" id="female" />
                             <label for="female">Female</label>
                         </fieldset>
                     </li>
-                    <li><label for="maritalstatus">Marital Status</label>
+                    <li>
+                        <label for="maritalstatus">Marital Status</label>
                         <select name="maritalstatus" id="maritalstatus">
                             <option value="Married">Married</option>
                             <option value="Unmarried">Unmarried</option>
@@ -64,24 +67,29 @@
             <div class="step step2">
                 <h1>Academic Details</h1>
                 <ul>
-                    <li><label for="rollno">Roll No</label>
+                    <li>
+                        <label for="rollno">Roll No</label>
                         <input type="number" name="rollno" id="rollno" placeholder="Enter your Roll No" required />
                         <span class="error" id="erRollno"></span>
                     </li>
-                    <li><label for="course">Course</label>
+                    <li>
+                        <label for="course">Course</label>
                         <input type="text" name="course" id="course" placeholder="Enter your course" required />
                         <span class="error" id="erCourse"></span>
                     </li>
-                    <li> <label for="branch">Branch</label>
+                    <li>
+                        <label for="branch">Branch</label>
                         <input type="text" name="branch" id="branch" placeholder="Enter your branch" required />
                         <span class="error" id="erBranch"></span>
                     </li>
-                    <li><label for="currentsemester">Current Semester</label>
+                    <li>
+                        <label for="currentsemester">Current Semester</label>
                         <input type="number" name="currentsemester" id="currentsemester"
                             placeholder="Enter your Current Semester" required />
                         <span class="error" id="erCurrentsemester"></span>
                     </li>
-                    <li><label for="college">College</label>
+                    <li>
+                        <label for="college">College</label>
                         <input type="text" name="college" id="college" placeholder="College Name" required />
                         <span class="error" id="erCollege"></span>
                     </li>
@@ -90,23 +98,28 @@
             <div class="step step3">
                 <h1>Contact Details</h1>
                 <ul>
-                    <li><label for="address">Address</label>
+                    <li>
+                        <label for="address">Address</label>
                         <input type="text" name="address" id="address" placeholder="Address" required />
                         <span class="error" id="erAddress"></span>
                     </li>
-                    <li> <label for="city">City</label>
+                    <li>
+                        <label for="city">City</label>
                         <input type="text" name="city" id="city" placeholder="City" required />
                         <span class="error" id="erCity"></span>
                     </li>
-                    <li><label for="state">State</label>
+                    <li>
+                        <label for="state">State</label>
                         <input type="text" name="state" id="state" placeholder="State" required />
                         <span class="error" id="erState"></span>
                     </li>
-                    <li><label for="zipcode">Zip Code</label>
+                    <li>
+                        <label for="zipcode">Zip Code</label>
                         <input type="number" name="zipcode" id="zipcode" placeholder="Zip Code" required />
                         <span class="error" id="erZipcode"></span>
                     </li>
-                    <li><label for="country">Country</label>
+                    <li>
+                        <label for="country">Country</label>
                         <input type="text" name="country" id="country" placeholder="Country" required />
                         <span class="error" id="erCountry"></span>
                     </li>
@@ -115,42 +128,83 @@
             <div class="step step4">
                 <h1>Occupation Information</h1>
                 <ul>
-                    <li><label for="occupationtype">Occupation Type</label>
+                    <li>
+                        <label for="occupationtype">Occupation Type</label>
                         <input type="text" name="occupationtype" id="occupationtype" placeholder="Occupation Type"
                             required />
-                            <span class="error" id="erOccupationtype"></span>
+                        <span class="error" id="erOccupationtype"></span>
                     </li>
-                    <li><label for="occupationstatus">Occupation Status</label>
+                    <li>
+                        <label for="occupationstatus">Occupation Status</label>
                         <input type="text" name="occupationstatus" id="occupationstatus" placeholder="Occupation Status"
                             required />
-                            <span class="error" id="erOccupationstatus"></span>
+                        <span class="error" id="erOccupationstatus"></span>
                     </li>
-                    <li><label for="employername">Employer Name</label>
+                    <li>
+                        <label for="employername">Employer Name</label>
                         <input type="text" name="employername" id="employername" placeholder="Employer Name" required />
                         <span class="error" id="erEmployername"></span>
                     </li>
-                    <li><label for="startdate">Start Date</label>
+                    <li>
+                        <label for="startdate">Start Date</label>
                         <input type="date" name="startdate" id="startdate" placeholder="Start Date" required />
                         <span class="error" id="erStartdate"></span>
                     </li>
-                    <li><label for="designation">Designation</label>
+                    <li>
+                        <label for="designation">Designation</label>
                         <input type="text" name="designation" id="designation" placeholder="Designation" required />
                         <span class="error" id="erDesignation"></span>
                     </li>
                 </ul>
             </div>
-            <div class="btnGroup">
-                <button class="btn prev" onclick="prev()"><i class="fas fa-chevron-circle-left"></i> Previous</button>
-                <button class="btn submit" onclick="next()">Submit <i class="fas fa-database"></i></button>
-                <button class="btn print">Print <i class="fas fa-print"></i></button>
-                <button class="btn next active" onclick="next()">Next <i
-                        class="fas fa-chevron-circle-right"></i></button>
+            <div class="printContainer">
+                <div class="printContainer__design">
+                    <h1>Details</h1>
+                    <ul>
+                        <!-- Personal Details -->
+                        <li> Name : <span id=nameValue></span></li>
+                        <li>Email : <span id=emailValue></span></li>
+                        <li> Date : <span id=dateValue></span></li>
+                        <li>Gender : <span id=genderValue></span></li>
+                        <li>Marital Status : <span id=genderValue></span></li>
+                         <!-- Academic Details -->
+                         <li>Roll No. : <span id=rollnoValue></span></li>
+                         <li>Course : <span id=courseValue></span></li>
+                         <li>Branch : <span id=branchValue></span></li>
+                         <li>Current Semester : <span id=currentsemesterValue></span></li>
+                         <li>College : <span id=collegeValue></span></li>
+                         <!-- Contact Details -->
+                         <li>Address : <span id=addressValue></span></li>
+                         <li>City : <span id=cityValue></span></li>
+                         <li>State : <span id=stateValue></span></li>
+                         <li>Zip Code : <span id=zipcodeValue></span></li>
+                         <li>Country : <span id=countryValue></span></li>
+                         <!-- Occupation Details -->
+                         <li> Occupation Type : <span id=occupationtypeValue></span></li>
+                         <li>Occupation Status : <span id=occupationstatusValue></span></li>
+                         <li>Employer Name : <span id=employernameValue></span></li>
+                         <li>Start Date : <span id=startdateValue></span></li>
+                         <li>Designation : <span id=designationValue></span></li>
+
+                    </ul>
+
+                </div>
+                
             </div>
-
+            <div class="btnGroup">
+                <button class="btn prev" onclick="prev()">
+                    <i class="fas fa-chevron-circle-left"></i> Previous
+                </button>
+                <button class="btn submit" onclick="next()">
+                    Submit <i class="fas fa-database"></i>
+                </button>
+                <button class="btn print" onclick="printValue()">Print <i class="fas fa-print"></i></button>
+                <button class="btn next active" onclick="next()">
+                    Next <i class="fas fa-chevron-circle-right"></i>
+                </button>
+            </div>
         </div>
-
     </div>
-
 
     <!-- Script File -->
     <script src="./javascript/script.js"></script>
