@@ -19,6 +19,7 @@ html {
 .wrapper {
   box-shadow: 0 10px 6px -6px #777;
   padding: 1rem;
+  border: 1px solid #777;
 }
 h1{
   font-family: "Goblin One", cursive;
@@ -35,12 +36,12 @@ thead tr {
   height: 50px;
 }
 thead th {
-  padding: 5px;
-  text-align: center;
+  padding: 5px 10px;
+  text-align: left;
 }
 tbody td {
-  text-align: center;
-  padding: 5px;
+  text-align: left;
+  padding: 5px 10px;
 }
 td img {
   height: 25px;
