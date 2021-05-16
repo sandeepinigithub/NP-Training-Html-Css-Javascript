@@ -47,6 +47,7 @@ function viewData(u_id, u_name, u_username, u_email, u_phone, u_website) {
 }
 function togglePopup() {
     document.getElementById("popup1").classList.toggle("active");
+    document.getElementById('userTable').classList.toggle("blurView");
 }
 
 //invoking getData Function 
