@@ -20,6 +20,7 @@ html {
   position: relative;
   box-shadow: 0 10px 6px -6px #777;
   padding: 1rem;
+  overflow-x: auto;
   border: 1px solid var(--color2_orange);
 }
 h1,h3{
