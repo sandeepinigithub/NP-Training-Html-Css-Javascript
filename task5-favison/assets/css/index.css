@@ -1,0 +1,200 @@
+/* Basic styling */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --redColor: #f84b67;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+}
+nav {
+  background: #222;
+  padding: 0 15px;
+  font-size: 2em;
+  font-weight: bold;
+}
+.navbar-toggler span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--redColor);
+  margin: auto;
+  margin-bottom: 4px;
+  transition: all 400ms linear;
+  cursor: pointer;
+}
+.navbar-toggler[aria-expanded="true"] span:first-child {
+  transform: rotate(-45deg);
+  position: relative;
+  top: 7.5px;
+}
+.navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-toggler[aria-expanded="true"] span:last-child {
+  transform: rotate(45deg);
+  bottom: 6px;
+  position: relative;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.menu,
+.submenu {
+  list-style-type: none;
+}
+.item {
+  padding: 10px;
+}
+.navbar-toggler button {
+  padding: 9px 5px;
+  background-color: transparent;
+  border: 1px transparent;
+}
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: #ccc;
+}
+
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+}
+.menu li.subitem a {
+  padding: 15px;
+}
+.navbar-toggler {
+  order: 1;
+  font-size: 20px;
+}
+.item.button {
+  order: 2;
+}
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.active .item {
+  display: block;
+}
+.button.secondary {
+  /* divider between buttons and menu links */
+  border-bottom: 1px solid var(--redColor);
+}
+
+/* Submenu up from mobile screens */
+.submenu {
+  display: none;
+}
+.submenu-active .submenu {
+  display: block;
+}
+.has-submenu i {
+  font-size: 12px;
+}
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\f078";
+  color: white;
+  padding-left: 5px;
+}
+.subitem a {
+  padding: 10px 15px;
+}
+.submenu-active {
+  background-color: #111;
+  border-radius: 3px;
+}
+
+/* Tablet menu */
+@media only screen and (min-width: 768px) {
+  .menu {
+    justify-content: center;
+  }
+  .logo {
+    flex: 1;
+  }
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+  .navbar-toggler {
+    flex: 1;
+    text-align: right;
+    order: 2;
+  }
+  /* Button up from tablet screen */
+  .menu li.button a {
+    padding: 5px 10px;
+    margin: 5px 0;
+  }
+  .button a {
+    background: var(--redColor);
+    border: 1px solid var(--redColor);
+  }
+  .button.secondary {
+    border: 0;
+  }
+  .button.secondary a {
+    background: transparent;
+    border: 1px solid var(--redColor);
+  }
+  .button:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Desktop menu */
+@media only screen and (min-width: 992px) {
+  .menu {
+    align-items: center;
+    flex-wrap: nowrap;
+    background: none;
+  }
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+  }
+  .button {
+    order: 2;
+  }
+  .submenu-active .submenu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    background: #111;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  .item.shop-icon {
+    margin-left: 60px;
+  }
+  .submenu-active {
+    border-radius: 0;
+  }
+}
