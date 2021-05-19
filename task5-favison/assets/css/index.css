@@ -75,15 +75,27 @@ a {
 .menu li.subitem a {
   padding: 15px;
 }
-.navbar-toggler {
+.logo {
+  order: 0;
+}
+.shop-icon {
   order: 1;
+  display: block;
+  width: fit-content;
+  flex: 1;
+  text-align: right;
+}
+.navbar-toggler {
+  order: 2;
   font-size: 20px;
+  flex: 0.2;
+  text-align: right;
 }
 .item.button {
-  order: 2;
+  order: 3;
 }
 .item {
-  order: 3;
+  order: 4;
   width: 100%;
   text-align: center;
   display: none;
@@ -136,8 +148,13 @@ a {
     order: 1;
     display: block;
   }
-  .navbar-toggler {
+  .shop-icon {
+    order: 2;
     flex: 1;
+    text-align: right;
+  }
+  .navbar-toggler {
+    flex: 0.2;
     text-align: right;
     order: 2;
   }
@@ -180,6 +197,11 @@ a {
   }
   .button {
     order: 2;
+  }
+  .shop-icon{
+    order: 3;
+    flex: 0.2;
+    text-align: center;
   }
   .submenu-active .submenu {
     display: block;
