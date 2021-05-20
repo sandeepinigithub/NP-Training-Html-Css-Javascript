@@ -89,7 +89,7 @@ a {
 }
 .item:not(.button) a:hover,
 .item a:hover::after {
-  color: #ccc;
+  color: var(--redColor);
 }
 
 /* Mobile menu */
@@ -145,6 +145,9 @@ a {
 }
 .submenu-active .submenu {
   display: block;
+  text-align: center;
+  background: #fff;
+  transition: all 0.3s ease-in;
 }
 .has-submenu i {
   font-size: 12px;
@@ -160,6 +163,8 @@ a {
 }
 .subitem a {
   padding: 10px 15px;
+  color: #1d1d1d;
+  border-bottom: 1px solid #ededed;
 }
 .submenu-active {
   background-color: #111;
@@ -172,8 +177,7 @@ a {
   height: auto;
   margin-top: 80px;
 }
-
-/* Tablet menu */
+/*--================ Tablet View =================*/
 @media only screen and (min-width: 768px) {
   .header-container {
     background: #000;
@@ -185,9 +189,9 @@ a {
     z-index: 99;
     width: 100%;
     position: fixed;
-    top: -70px;
+    top: -80px;
     left: 0;
-    transform: translateY(70px);
+    transform: translateY(80px);
     transition: transform 0.5s ease, background 0.5s ease;
   }
   .menu {
@@ -232,7 +236,7 @@ a {
   }
 }
 
-/* Desktop menu */
+/*--================ Desktop View =================*/
 @media only screen and (min-width: 992px) {
   .header-container {
     background: transparent;
@@ -274,9 +278,11 @@ a {
   .submenu-active .submenu {
     display: block;
     position: absolute;
-    left: 0;
-    top: 68px;
-    background: #111;
+    top: 120%;
+    min-width: 200px;
+    text-align: left;
+    background: #fff;
+    transition: all 0.3s ease-in;
   }
   .navbar-toggler {
     display: none;
@@ -286,7 +292,9 @@ a {
   }
   .submenu-active {
     border-radius: 0;
+    background-color: transparent;
   }
+
   .banner-container img {
     margin-top: 0;
   }
