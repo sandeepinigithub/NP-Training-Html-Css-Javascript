@@ -47,3 +47,10 @@ function closeSubmenu(e) {
 }
 /* Event listener */
 document.addEventListener("click", closeSubmenu, false);
+
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.addEventListener('scroll', function () {
+    let header = document.querySelector('.header-container');
+    let windowPosition = window.scrollY >= 70;
+    header.classList.toggle('scrolling-active', windowPosition);
+})
