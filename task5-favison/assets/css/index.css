@@ -6,10 +6,14 @@
 }
 :root {
   --redColor: #f84b67;
+  --serviceIconBg1: #fca6a6;
+  --serviceIconBg2: #71beb4;
+  --serviceIconBg3: #ED92DD;
+  --serviceIcon: #050817;
 }
 body {
   line-height: 24px;
-  font-size: 10px;
+  font-size: 14px;
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   color: #7f7f7f;
@@ -28,7 +32,7 @@ h6 {
   background: #000;
   color: #fff;
   padding: 0 15px;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
   position: absolute;
   width: 100%;
@@ -171,12 +175,123 @@ a {
   border-radius: 3px;
 }
 
+.banner-container{
+  position: relative;
+  z-index: -1;
+}
+
 .banner-container img {
   display: block;
   max-width: 100%;
   height: auto;
   margin-top: 80px;
 }
+
+/* Banner content  */
+.banner-container-content{
+  /* taking reference of image-container so that it flexible with image  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
+
+
+}
+.banner-content-box{
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  z-index: 1;
+}
+
+
+/* Service section  */
+.service-container {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.single-service:nth-child(2) {
+  margin-top: 50px;
+}
+.single-service {
+  position: relative;
+  margin: 0px 15px 30px;
+  padding: 40px 30px 46px;
+  border: 1px solid #edf1f6;
+  max-width: 400px;
+}
+.single-service img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.service-icon {
+  width: 170px;
+  height: 95px;
+  text-align: center;
+  line-height: 112px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.service-icon-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 80px;
+  width: 80px;
+  background-color: var(--serviceIconBg1);
+  border-radius: 100%;
+  z-index: -1;
+}
+.single-service:nth-child(2) .service-icon-container {
+  background-color: var(--serviceIconBg2);
+}
+.single-service:nth-child(3) .service-icon-container {
+  background-color: var(--serviceIconBg3);
+}
+.service-icon i {
+  font-size: 40px;
+  color: var(--serviceIcon);
+}
+.service-content {
+  text-align: left;
+}
+.service-content h5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d1d1d;
+  margin-bottom: 18px;
+}
+.service-content p {
+  line-height: 27px;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+.service-content a {
+  font-size: 14px;
+  color: #1d1d1d;
+  position: relative;
+  font-weight: 500;
+}
+.service-content a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 90px;
+  background: #edf1f6;
+}
+
 /*--================ Tablet View =================*/
 @media only screen and (min-width: 768px) {
   .header-container {
