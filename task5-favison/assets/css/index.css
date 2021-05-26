@@ -30,6 +30,7 @@ h6 {
   line-height: 1.2;
 }
 
+
 /* ================ Header CSS ================= */
 
 .h__container {
@@ -87,7 +88,7 @@ a {
 .menu__item__submenu {
   list-style-type: none;
 }
-.menu__item{
+.menu__item {
   padding: 10px;
 }
 .menu__navtoggler button {
@@ -433,10 +434,12 @@ a {
   border-radius: 100%;
   z-index: -1;
 }
-.ser__sec__container__single:nth-child(2) .ser__sec__container__single__sericon__circle {
+.ser__sec__container__single:nth-child(2)
+  .ser__sec__container__single__sericon__circle {
   background-color: var(--serviceIconBg2);
 }
-.ser__sec__container__single:nth-child(3) .ser__sec__container__single__sericon__circle {
+.ser__sec__container__single:nth-child(3)
+  .ser__sec__container__single__sericon__circle {
   background-color: var(--serviceIconBg3);
 }
 .ser__sec__container__single__sericon i {
@@ -473,8 +476,105 @@ a {
   background: #edf1f6;
 }
 /* Service section END */
-/* ================ Main CSS END ================= */
 
+/* About section START */
+.abt__sec__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 80px 0;
+}
+.abt__sec__container__l {
+  padding: 0 15px;
+  flex:1 0 100%;
+  max-width: 100%;
+}
+.abt__sec__container__l h4 {
+  font-size: 45px;
+  color: #1d1d1d;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 40px;
+  line-height: 58px;
+}
+.abt__sec__container__l h6 {
+  font-size: 16px;
+  line-height: 1.2;
+  color: #333333;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.abt__sec__container__l__abtbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.abt__sec__container__l__abtbox1 {
+  flex: 1 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+  margin: 40px 0px;
+}
+.abt__sec__container__l__abtbox1__icon {
+  width: 170px;
+  height: 95px;
+  text-align: center;
+  line-height: 112px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.abt__sec__container__l__abtbox1__icon i {
+  font-size: 40px;
+  color: var(--serviceIcon);
+}
+.abt__sec__container__l__abtbox1__circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 80px;
+  width: 80px;
+  background-color: var(--serviceIconBg1);
+  border-radius: 100%;
+  z-index: -1;
+}
+.abt__sec__container__l__text h5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d1d1d;
+  margin-bottom: 18px;
+}
+
+.abt__sec__container__r{
+  align-self: center;
+}
+.abt__sec__container__r img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 992px) {
+  .l__break {
+    display: table;
+  }
+  .abt__sec__container{
+    flex-wrap: nowrap;
+  }
+  .abt__sec__container__l {
+    flex:0 0 50%;
+    max-width: 50%;
+  }
+  .abt__sec__container__l__abtbox1 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+    margin: 40px 0px;
+  }
+}
+/* About section END */
+
+/* ================ Main CSS END ================= */
 
 /* ================ Footer CSS ================= */
 
