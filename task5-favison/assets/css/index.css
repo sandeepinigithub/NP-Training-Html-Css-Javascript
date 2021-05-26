@@ -30,7 +30,9 @@ h6 {
   line-height: 1.2;
 }
 
-.header-container {
+/* ================ Header CSS ================= */
+
+.h__container {
   background: #000;
   color: #fff;
   padding: 0 15px;
@@ -54,7 +56,7 @@ h6 {
   transform: translateY(70px);
   transition: transform 0.5s ease, background 0.5s ease;
 }
-.navbar-toggler span {
+.menu__navtoggler span {
   display: block;
   width: 25px;
   height: 3px;
@@ -64,15 +66,15 @@ h6 {
   transition: all 400ms linear;
   cursor: pointer;
 }
-.navbar-toggler[aria-expanded="true"] span:first-child {
+.menu__navtoggler[aria-expanded="true"] span:first-child {
   transform: rotate(-45deg);
   position: relative;
   top: 7.5px;
 }
-.navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+.menu__navtoggler[aria-expanded="true"] span:nth-child(2) {
   opacity: 0;
 }
-.navbar-toggler[aria-expanded="true"] span:last-child {
+.menu__navtoggler[aria-expanded="true"] span:last-child {
   transform: rotate(45deg);
   bottom: 6px;
   position: relative;
@@ -81,84 +83,84 @@ a {
   color: white;
   text-decoration: none;
 }
-.menu,
-.submenu {
+.h__container__menu,
+.menu__item__submenu {
   list-style-type: none;
 }
-.item {
+.menu__item{
   padding: 10px;
 }
-.navbar-toggler button {
+.menu__navtoggler button {
   padding: 9px 5px;
   background-color: transparent;
   border: 1px transparent;
 }
-.item:not(.button) a:hover,
-.item a:hover::after {
+.menu__item:not(.menu__item__button--p) a:hover,
+.menu__item a:hover::after {
   color: var(--redColor);
 }
 
 /* Mobile menu */
-.menu {
+.h__container__menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-.menu li a {
+.h__container__menu li a {
   display: block;
   padding: 15px 5px;
 }
-.menu li.subitem a {
+.h__container__menu li.subitem a {
   padding: 15px;
 }
-.logo {
+.menu__logo {
   order: 0;
 }
-.shop-icon {
+.menu__shopicon {
   order: 1;
   display: block;
   width: fit-content;
   flex: 1;
   text-align: right;
 }
-.navbar-toggler {
+.menu__navtoggler {
   order: 2;
   font-size: 20px;
   flex: 0.2;
   text-align: right;
 }
-.item.button {
+.menu__item.menu__item__button--p {
   order: 3;
 }
-.item {
+.menu__item {
   order: 4;
   width: 100%;
   text-align: center;
   display: none;
 }
-.active .item {
+.active .menu__item {
   display: block;
 }
-.button.secondary {
+.menu__item__button--p.menu__item__button--s {
   /* divider between buttons and menu links */
   border-bottom: 1px solid var(--redColor);
 }
 
 /* Submenu up from mobile screens */
-.submenu {
+.menu__item__submenu {
   display: none;
 }
-.submenu-active .submenu {
+.menu__item__submenu--active .menu__item__submenu {
   display: block;
   text-align: center;
   background: #fff;
   transition: all 0.3s ease-in;
 }
-.has-submenu i {
+.menu__item__hassubmenu i {
   font-size: 12px;
 }
-.has-submenu > a::after {
+.menu__item__hassubmenu > a::after {
   font-family: "Font Awesome 5 Free";
   font-size: 12px;
   line-height: 16px;
@@ -167,22 +169,142 @@ a {
   color: white;
   padding-left: 5px;
 }
-.subitem a {
+.submenu__subitem a {
   padding: 10px 15px;
   color: #1d1d1d;
   border-bottom: 1px solid #ededed;
 }
-.submenu-active {
+.menu__item__submenu--active {
   background-color: #111;
   border-radius: 3px;
 }
+@media only screen and (min-width: 768px) {
+  .h__container {
+    background: #000;
+  }
+  .scrolling-active {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+    color: white;
+    z-index: 99;
+    width: 100%;
+    position: fixed;
+    top: -80px;
+    left: 0;
+    transform: translateY(80px);
+    transition: transform 0.5s ease, background 0.5s ease;
+  }
+  .h__container__menu {
+    justify-content: center;
+  }
+  .menu__logo {
+    flex: 1;
+  }
+  .menu__item.menu__item__button--p {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+  .menu__shopicon {
+    order: 2;
+    flex: 1;
+    text-align: right;
+  }
+  .menu__navtoggler {
+    flex: 0.2;
+    text-align: right;
+    order: 2;
+  }
+  /* Button up from tablet screen */
+  .h__container__menu li.menu__item__button--p a {
+    padding: 5px 10px;
+    margin: 5px 0;
+  }
+  .menu__item__button--p a {
+    background: var(--redColor);
+    border: 1px solid var(--redColor);
+  }
+  .menu__item__button--p.menu__item__button--s {
+    border: 0;
+  }
+  .menu__item__button--p.menu__item__button--s a {
+    background: transparent;
+    border: 1px solid var(--redColor);
+  }
+  .menu__item__button--p:hover {
+    opacity: 0.8;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .h__container {
+    background: transparent;
+  }
+  .scrolling-active {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+    color: white;
+    z-index: 99;
+    width: 100%;
+    position: fixed;
+    top: -70px;
+    left: 0;
+    transform: translateY(70px);
+    transition: transform 0.5s ease, background 0.5s ease;
+  }
+  .h__container__menu {
+    align-items: center;
+    flex-wrap: nowrap;
+    background: none;
+  }
+  .menu__logo {
+    order: 0;
+  }
+  .menu__item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+  }
+  .menu__item__button--p {
+    order: 2;
+  }
+  .menu__shopicon {
+    order: 3;
+    flex: 0.2;
+    text-align: center;
+  }
+  .menu__item__submenu--active .menu__item__submenu {
+    display: block;
+    position: absolute;
+    top: 120%;
+    min-width: 200px;
+    text-align: left;
+    background: #fff;
+    transition: all 0.3s ease-in;
+  }
+  .menu__navtoggler {
+    display: none;
+  }
+  .menu__item.menu__shopicon {
+    margin-left: 60px;
+  }
+  .menu__item__submenu--active {
+    border-radius: 0;
+    background-color: transparent;
+  }
+}
+/* ================ Header CSS END ================= */
 
-.banner-container {
+/* ================ Main CSS ================= */
+
+/* Banner Section START */
+
+.b__sec__container {
   position: relative;
   z-index: -1;
 }
 
-.banner-container img {
+.b__sec__container img {
   display: block;
   max-width: 100%;
   height: min-content;
@@ -190,7 +312,7 @@ a {
 }
 
 /* Banner content  */
-.banner-container-content {
+.b__sec__container__textbox {
   /* taking reference of image-container so that it flexible with image  */
   position: absolute;
   top: 0;
@@ -203,25 +325,25 @@ a {
   width: 100%;
   color: #fff;
 }
-.banner-content-box {
+.b__sec__container__textbox__text {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
   padding: 20px;
   width: 90%;
   height: min-content;
 }
-.banner-content-box h3 {
+.b__sec__container__textbox__text h3 {
   font-size: 30px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin-bottom: 30px;
 }
-.banner-content-box p {
+.b__sec__container__textbox__text p {
   font-size: 15px;
   font-weight: 300;
   margin-bottom: 50px;
 }
-.banner_btn {
+.b__sec__container__textbox__text__btn {
   display: inline-block;
   background: var(--redColor);
   padding: 0 0 0 30px;
@@ -235,41 +357,64 @@ a {
   cursor: pointer;
   text-transform: uppercase;
 }
-.banner-content-box i {
+.b__sec__container__textbox__text i {
   background-color: #fff;
   padding: 18px 19px;
   margin-left: 17px;
   color: #000;
   border-radius: 0 0 0 21px;
 }
-.l-break {
-  line-break: strict;
+@media only screen and (min-width: 768px) {
+  .b__sec__container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 80px;
+  }
+  .b__sec__container__textbox__text h3 {
+    font-size: 30px;
+  }
 }
+@media only screen and (min-width: 992px) {
+  .b__sec__container img {
+    margin-top: 0;
+  }
+  .b__sec__container__textbox__text h3 {
+    font-size: 50px;
+  }
+  .b__sec__container__textbox__text {
+    background: transparent;
+    z-index: 1;
+    margin-left: 50%;
+    padding: 20px;
+  }
+}
+/* Banner Section END */
 
-/* Service section  */
-.service-container {
+/* Service section START */
+.ser__sec__container {
   padding: 80px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.single-service:nth-child(2) {
+.ser__sec__container__single:nth-child(2) {
   margin-top: 50px;
 }
-.single-service {
+.ser__sec__container__single {
   position: relative;
   margin: 0px 15px 30px;
   padding: 40px 30px 46px;
   border: 1px solid #edf1f6;
   max-width: 400px;
 }
-.single-service img {
+.ser__sec__container__single img {
   position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
 }
-.service-icon {
+.ser__sec__container__single__sericon {
   width: 170px;
   height: 95px;
   text-align: center;
@@ -278,7 +423,7 @@ a {
   position: relative;
   z-index: 1;
 }
-.service-icon-container {
+.ser__sec__container__single__sericon__circle {
   position: absolute;
   left: 0;
   top: 0;
@@ -288,37 +433,37 @@ a {
   border-radius: 100%;
   z-index: -1;
 }
-.single-service:nth-child(2) .service-icon-container {
+.ser__sec__container__single:nth-child(2) .ser__sec__container__single__sericon__circle {
   background-color: var(--serviceIconBg2);
 }
-.single-service:nth-child(3) .service-icon-container {
+.ser__sec__container__single:nth-child(3) .ser__sec__container__single__sericon__circle {
   background-color: var(--serviceIconBg3);
 }
-.service-icon i {
+.ser__sec__container__single__sericon i {
   font-size: 40px;
   color: var(--serviceIcon);
 }
-.service-content {
+.ser__sec__container__single__text {
   text-align: left;
 }
-.service-content h5 {
+.ser__sec__container__single__text h5 {
   font-size: 20px;
   font-weight: 600;
   color: #1d1d1d;
   margin-bottom: 18px;
 }
-.service-content p {
+.ser__sec__container__single__text p {
   line-height: 27px;
   font-size: 14px;
   margin-bottom: 35px;
 }
-.service-content a {
+.ser__sec__container__single__text a {
   font-size: 14px;
   color: #1d1d1d;
   position: relative;
   font-weight: 500;
 }
-.service-content a:after {
+.ser__sec__container__single__text a:after {
   content: "";
   position: absolute;
   left: 0;
@@ -327,24 +472,30 @@ a {
   width: 90px;
   background: #edf1f6;
 }
-/* Footer Menu  */
-.footer-container {
+/* Service section END */
+/* ================ Main CSS END ================= */
+
+
+/* ================ Footer CSS ================= */
+
+/* Footer section START  */
+.f__container {
   padding: 60px 30px;
   background-color: var(--fSecColor);
 }
-.footer-logo {
+.f__container__widget__single__logo {
   margin-top: 28px;
 }
-.footer-container ul li{
+.f__container ul li {
   list-style: none;
   padding: 0;
 }
-.footer-widget {
+.f__container__widget {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.footer-bottom {
+.f__container__fbottom {
   margin: 50px 0 0 0;
   padding: 20px 0;
   border-top: 1px solid #4c4f60;
@@ -352,29 +503,30 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.single-footer-widget{
+.f__container__widget__single {
   padding: 0 15px;
   margin: 0px 0px 24px;
   flex: 0 0 50%;
   max-width: 50%;
 }
-.single-footer-widget:nth-child(4){
+.f__container__widget__single:nth-child(4) {
   flex: 0 0 67%;
   max-width: 67%;
 }
-.single-footer-widget h4 {
+.f__container__widget__single h4 {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 25px;
   color: #fff;
 }
-.single-footer-widget p , .single-footer-widget a {
-    color: #7b838a;
+.f__container__widget__single p,
+.f__container__widget__single a {
+  color: #7b838a;
 }
-.single-footer-widget p{
-  margin: 0px 0px 16px ;
+.f__container__widget__single p {
+  margin: 0px 0px 16px;
 }
-.single-footer-widget input {
+.f__container__widget__single input {
   height: 40px;
   width: 100%;
   border: 1px solid #eeeeee;
@@ -390,7 +542,7 @@ a {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.single-footer-widget .footer-btn {
+.f__container__widget__single .f__container__widget__fwrap__fbtn {
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -406,12 +558,12 @@ a {
   z-index: 999;
   cursor: pointer;
 }
-.input-group{
+.f__container__widget__fwrap__ipgroup {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
 }
-.footer-social a {
+.f__container__fbottom__fsocial a {
   margin-left: 3px;
   width: 32px;
   color: #8f919c;
@@ -421,169 +573,31 @@ a {
   align-content: center;
   transition: all 300ms linear 0s;
 }
-.footer-bottom p a {
+.f__container__fbottom p a {
   color: var(--redColor);
 }
-.footer-bottom{
+.f__container__fbottom {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
-.footer-text{
+.f__container__fbottom__text {
   flex: 0 0 66.667%;
-
 }
-
-/*--================ Tablet View =================*/
 @media only screen and (min-width: 768px) {
-  .header-container {
-    background: #000;
-  }
-  .scrolling-active {
-    background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
-    color: white;
-    z-index: 99;
-    width: 100%;
-    position: fixed;
-    top: -80px;
-    left: 0;
-    transform: translateY(80px);
-    transition: transform 0.5s ease, background 0.5s ease;
-  }
-  .menu {
-    justify-content: center;
-  }
-  .logo {
-    flex: 1;
-  }
-  .item.button {
-    width: auto;
-    order: 1;
-    display: block;
-  }
-  .shop-icon {
-    order: 2;
-    flex: 1;
-    text-align: right;
-  }
-  .navbar-toggler {
-    flex: 0.2;
-    text-align: right;
-    order: 2;
-  }
-  /* Button up from tablet screen */
-  .menu li.button a {
-    padding: 5px 10px;
-    margin: 5px 0;
-  }
-  .button a {
-    background: var(--redColor);
-    border: 1px solid var(--redColor);
-  }
-  .button.secondary {
-    border: 0;
-  }
-  .button.secondary a {
-    background: transparent;
-    border: 1px solid var(--redColor);
-  }
-  .button:hover {
-    opacity: 0.8;
-  }
-  .banner-container img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-top: 80px;
-  }
-  .banner-content-box h3 {
-    font-size: 30px;
-  }
-  .single-footer-widget{
+  .f__container__widget__single {
     flex: 0 0 25%;
     max-width: 25%;
   }
 }
-
-/*--================ Desktop View =================*/
 @media only screen and (min-width: 992px) {
-  .header-container {
-    background: transparent;
-  }
-  .scrolling-active {
-    background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
-    color: white;
-    z-index: 99;
-    width: 100%;
-    position: fixed;
-    top: -70px;
-    left: 0;
-    transform: translateY(70px);
-    transition: transform 0.5s ease, background 0.5s ease;
-  }
-  .menu {
-    align-items: center;
-    flex-wrap: nowrap;
-    background: none;
-  }
-  .logo {
-    order: 0;
-  }
-  .item {
-    order: 1;
-    position: relative;
-    display: block;
-    width: auto;
-  }
-  .button {
-    order: 2;
-  }
-  .shop-icon {
-    order: 3;
-    flex: 0.2;
-    text-align: center;
-  }
-  .submenu-active .submenu {
-    display: block;
-    position: absolute;
-    top: 120%;
-    min-width: 200px;
-    text-align: left;
-    background: #fff;
-    transition: all 0.3s ease-in;
-  }
-  .navbar-toggler {
-    display: none;
-  }
-  .item.shop-icon {
-    margin-left: 60px;
-  }
-  .submenu-active {
-    border-radius: 0;
-    background-color: transparent;
-  }
-
-  .banner-container img {
-    margin-top: 0;
-  }
-  .banner-content-box h3 {
-    font-size: 50px;
-  }
-  .banner-content-box {
-    background: transparent;
-    z-index: 1;
-    margin-left: 50%;
-    padding: 20px;
-  }
-
-  .single-footer-widget{
+  .f__container__widget__single {
     padding: 0 15px;
     flex: 0 0 25%;
     max-width: 25%;
   }
-  .single-footer-widget:nth-child(4){
+  .f__container__widget__single:nth-child(4) {
     flex: 0 0 25%;
     max-width: 25%;
   }
 }
+/* ================ Footer CSS END ================= */

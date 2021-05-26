@@ -1,6 +1,6 @@
-const toggle = document.querySelector(".navbar-toggler");
-const menu = document.querySelector(".menu");
-const items = document.querySelectorAll(".item");
+const toggle = document.querySelector(".menu__navtoggler");
+const menu = document.querySelector(".h__container__menu");
+const items = document.querySelectorAll(".menu__item");
 /* Toggle mobile menu */
 function toggleMenu() {
     if (menu.classList.contains("active")) {
@@ -21,18 +21,18 @@ function toggleMenu() {
 toggle.addEventListener("click", toggleMenu, false);
 /* Activate Submenu */
 function toggleItem() {
-    if (this.classList.contains("submenu-active")) {
-        this.classList.remove("submenu-active");
-    } else if (menu.querySelector(".submenu-active")) {
-        menu.querySelector(".submenu-active").classList.remove("submenu-active");
-        this.classList.add("submenu-active");
+    if (this.classList.contains("menu__item__submenu--active")) {
+        this.classList.remove("menu__item__submenu--active");
+    } else if (menu.querySelector(".menu__item__submenu--active")) {
+        menu.querySelector(".menu__item__submenu--active").classList.remove("menu__item__submenu--active");
+        this.classList.add("menu__item__submenu--active");
     } else {
-        this.classList.add("submenu-active");
+        this.classList.add("menu__item__submenu--active");
     }
 }
 /* Event Listeners */
 for (let item of items) {
-    if (item.querySelector(".submenu")) {
+    if (item.querySelector(".menu__item__submenu")) {
         item.addEventListener("click", toggleItem, false);
         item.addEventListener("keypress", toggleItem, false);
     }
@@ -41,8 +41,8 @@ for (let item of items) {
 function closeSubmenu(e) {
     let isClickInside = menu.contains(e.target);
 
-    if (!isClickInside && menu.querySelector(".submenu-active")) {
-        menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    if (!isClickInside && menu.querySelector(".menu__item__submenu--active")) {
+        menu.querySelector(".menu__item__submenu--active").classList.remove("menu__item__submenu--active");
     }
 }
 /* Event listener */
@@ -50,7 +50,7 @@ document.addEventListener("click", closeSubmenu, false);
 
 // When the user scrolls down 20px from the top of the document, slide down the navbar
 window.addEventListener('scroll', function () {
-    let header = document.querySelector('.header-container');
+    let header = document.querySelector('.h__container');
     let windowPosition = window.scrollY >= 80;
     header.classList.toggle('scrolling-active', windowPosition);
 })
