@@ -574,6 +574,10 @@ a {
 }
 /* About section END */
 
+.pricing__sec__container{
+  padding: 80px;
+}
+
 /* Blog section START */
 .blog__sec__container {
   padding: 8rem 2rem;
