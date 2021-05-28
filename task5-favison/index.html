@@ -10,6 +10,9 @@
   <!-- Custome Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Swiper CSS  -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- Main CSS  -->
   <link rel="stylesheet" href="./assets/css/index.css" />
   <title>Favison</title>
@@ -160,9 +163,11 @@
       </div>
 
     </section>
-    <section class="feature-section"></section>
-    <section class="static-section"></section>
-    <section class="pricing-section"></section>
+    <section class="pricing__sec">
+      <div class="pricing__sec__container">
+        
+      </div>
+    </section>
     <section class="blog__sec">
       <div class="blog__sec__container">
         <div class="blog__sec__container__textbox">
@@ -244,7 +249,44 @@
 
       </div>
     </section>
-    <section class="brand-section"></section>
+    <section class="brand__sec">
+      <div class="brand__sec__container">
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="brand__sec__container__logo">
+                <img src="./assets/images/bottomlogo/1.png" alt="">
+              </div>
+
+            </div>
+            <div class="swiper-slide">
+              <div class="brand__sec__container__logo">
+                <img src="./assets/images/bottomlogo/2.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="brand__sec__container__logo">
+                <img src="./assets/images/bottomlogo/3.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="brand__sec__container__logo">
+                <img src="./assets/images/bottomlogo/4.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="brand__sec__container__logo">
+                <img src="./assets/images/bottomlogo/5.png" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!--================ Footer =================-->
@@ -317,6 +359,10 @@
     </div>
 
   </footer>
+  <!-- Swiper Script  -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Main Script  -->
   <script src="./assets/javascript/index.js"></script>
 </body>
 

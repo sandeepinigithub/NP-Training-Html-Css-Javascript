@@ -54,3 +54,13 @@ window.addEventListener('scroll', function () {
     let windowPosition = window.scrollY >= 80;
     header.classList.toggle('scrolling-active', windowPosition);
 })
+
+// Swiper script 
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });

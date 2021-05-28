@@ -810,6 +810,25 @@ a {
 }
 /* Blog section END */
 
+/* Brands section START */
+.brand__sec__container{
+  padding: 0 3rem 3rem;
+}
+.brand__sec__container__logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.swiper-container {
+  width: 100%;
+  height: 10rem;
+}
+/* Brands section END */
+
+
+
 /* ================ Main CSS END ================= */
 
 /* ================ Footer CSS ================= */
