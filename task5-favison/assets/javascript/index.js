@@ -1,6 +1,71 @@
+
+let dynamic_header_html = "";
+
+//javascript header
+const dynamic_header = document.querySelector(".h__container");
+function dynamic_menu() {
+    dynamic_header_html += `<nav>
+    <ul class="h__container__menu">
+    <li class="menu__logo">
+        <a href="./index.html"><img src="./assets/images/logo.png" alt="logo" /></a>
+    </li>
+    ` ;
+    for (var i = 0; i < arguments.length; i++) {
+        if (arguments[i] == "Home" || arguments[i] == "home") {
+            dynamic_header_html += `<li class="menu__item"><a href="./index.html">${arguments[i]}</a></li>`;
+        }
+        else if (i == 2) {
+            dynamic_header_html += `<li class="menu__item"><a href="./index.html">${arguments[i]}</a></li>`;
+            dynamic_submenu("Pages", "Features", "Price", "Element");
+        }
+        else if (i == 3) {
+            dynamic_submenu("Blog","Blog","Blog Details");
+            dynamic_header_html += `<li class="menu__item"><a href="./index.html">${arguments[i]}</a></li>`;
+            
+        }
+        else {
+            dynamic_header_html += `<li class="menu__item"><a href="./assets/routes/${arguments[i]}.html">${arguments[i]}</a></li>`;
+
+        }
+
+    }
+    dynamic_header_html += `<li class="menu__item menu__item__button--p"><a href="#">Log In</a></li>
+    <li class="menu__item menu__item__button--p menu__item__button--s"><a href="#">Sign Up</a></li>
+    <li class="menu__shopicon">
+      <a href="#"><i class="fas fa-shopping-cart"></i><span>0</span></a>
+    </li>
+    <li class="menu__navtoggler" aria-expanded="false">
+      <button>
+        <span class="menu__navtoggle__ibar"></span>
+        <span class="menu__navtoggle__ibar"></span>
+        <span class="menu__navtoggle__ibar"></span>
+      </button>
+    </li>
+    </ul>
+    </nav>`;
+
+}
+function dynamic_submenu() {
+    dynamic_header_html += `<li class="menu__item menu__item__hassubmenu">`;
+    for (var j = 0; j < arguments.length; j++) {
+        if (j == 0) {
+            dynamic_header_html += `<a tabindex="0">${arguments[j]}</a> <ul class="menu__item__submenu"> `;
+        }
+        else {
+            dynamic_header_html += `         
+            <li class="submenu__subitem"><a href="./assets/routes/${arguments[j]}.html">Features</a></li>`;
+        }
+    }
+    dynamic_header_html += `</ul></li>`
+
+}
+dynamic_menu("Home","Features","Price","Contact");
+dynamic_header.innerHTML = dynamic_header_html;
+
 const toggle = document.querySelector(".menu__navtoggler");
 const menu = document.querySelector(".h__container__menu");
 const items = document.querySelectorAll(".menu__item");
+
 /* Toggle mobile menu */
 function toggleMenu() {
     if (menu.classList.contains("active")) {
@@ -60,7 +125,9 @@ var swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
     spaceBetween: 30,
     pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+        el: '.swiper-pagination',
+        clickable: true,
     },
-  });
+});
+
+
