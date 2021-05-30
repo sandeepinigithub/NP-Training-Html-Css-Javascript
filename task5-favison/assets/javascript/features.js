@@ -1,6 +1,71 @@
+
+let dynamic_header_html = "";
+
+//javascript header
+const dynamic_header = document.querySelector(".h__container");
+function dynamic_menu() {
+    dynamic_header_html += `<nav>
+    <ul class="h__container__menu">
+    <li class="menu__logo">
+        <a href="./index.html"><img src="./assets/images/logo.png" alt="logo" /></a>
+    </li>
+    ` ;
+    for (var i = 0; i < arguments.length; i++) {
+        if (arguments[i] == "Home" || arguments[i] == "home") {
+            dynamic_header_html += `<li class="menu__item"><a href="./index.html">${arguments[i]}</a></li>`;
+        }
+        else if (i == 2) {
+            dynamic_header_html += `<li class="menu__item"><a href="./${arguments[i]}.html">${arguments[i]}</a></li>`;
+            dynamic_submenu("pages", "features", "price", "blog");
+        }
+        else if (i == 3) {
+            dynamic_submenu("blog","blog","features");
+            dynamic_header_html += `<li class="menu__item"><a href="./${arguments[i]}.html">${arguments[i]}</a></li>`;
+            
+        }
+        else {
+            dynamic_header_html += `<li class="menu__item"><a href="./${arguments[i]}.html">${arguments[i]}</a></li>`;
+
+        }
+
+    }
+    dynamic_header_html += `<li class="menu__item menu__item__button--p"><a href="#">Log In</a></li>
+    <li class="menu__item menu__item__button--p menu__item__button--s"><a href="#">Sign Up</a></li>
+    <li class="menu__shopicon">
+      <a href="#"><i class="fas fa-shopping-cart"></i><span>0</span></a>
+    </li>
+    <li class="menu__navtoggler" aria-expanded="false">
+      <button>
+        <span class="menu__navtoggle__ibar"></span>
+        <span class="menu__navtoggle__ibar"></span>
+        <span class="menu__navtoggle__ibar"></span>
+      </button>
+    </li>
+    </ul>
+    </nav>`;
+
+}
+function dynamic_submenu() {
+    dynamic_header_html += `<li class="menu__item menu__item__hassubmenu">`;
+    for (var j = 0; j < arguments.length; j++) {
+        if (j == 0) {
+            dynamic_header_html += `<a tabindex="0">${arguments[j]}</a> <ul class="menu__item__submenu"> `;
+        }
+        else {
+            dynamic_header_html += `         
+            <li class="submenu__subitem"><a href="./${arguments[j]}.html">${arguments[j]}</a></li>`;
+        }
+    }
+    dynamic_header_html += `</ul></li>`
+
+}
+dynamic_menu("home", "features", "price", "contact");
+dynamic_header.innerHTML = dynamic_header_html;
+
 const toggle = document.querySelector(".menu__navtoggler");
 const menu = document.querySelector(".h__container__menu");
 const items = document.querySelectorAll(".menu__item");
+
 /* Toggle mobile menu */
 function toggleMenu() {
     if (menu.classList.contains("active")) {
@@ -54,3 +119,24 @@ window.addEventListener('scroll', function () {
     let windowPosition = window.scrollY >= 80;
     header.classList.toggle('scrolling-active', windowPosition);
 })
+
+const bannerContent = document.querySelector(".b__sec__container__textbox");
+let dynamic_banner_html = "";
+let curUrl;
+
+function dynamic_banner(curUrl) {
+    let curPage = curUrl.split("/")
+    let len = curPage.length;
+    console.log(curPage[len - 1]);
+    let banner_heading = curPage[len - 1].split(".")[0];
+    dynamic_banner_html += `<div class="b__sec__container__textbox__text">
+                            <h3>${banner_heading}</h3>
+                            <p>home/${banner_heading}</p>
+                            </div>`
+    bannerContent.innerHTML = dynamic_banner_html;
+}
+dynamic_banner(window.location.href);
+console.log("Hello");
+
+
+

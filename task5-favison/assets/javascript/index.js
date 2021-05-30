@@ -15,16 +15,16 @@ function dynamic_menu() {
             dynamic_header_html += `<li class="menu__item"><a href="./index.html">${arguments[i]}</a></li>`;
         }
         else if (i == 2) {
-            dynamic_header_html += `<li class="menu__item"><a href="./index.html">${arguments[i]}</a></li>`;
-            dynamic_submenu("Pages", "Features", "Price", "Element");
+            dynamic_header_html += `<li class="menu__item"><a href="./${arguments[i]}.html">${arguments[i]}</a></li>`;
+            dynamic_submenu("pages", "features", "price", "blog");
         }
         else if (i == 3) {
-            dynamic_submenu("Blog","Blog","Blog Details");
-            dynamic_header_html += `<li class="menu__item"><a href="./index.html">${arguments[i]}</a></li>`;
+            dynamic_submenu("blog","blog","features");
+            dynamic_header_html += `<li class="menu__item"><a href="./${arguments[i]}.html">${arguments[i]}</a></li>`;
             
         }
         else {
-            dynamic_header_html += `<li class="menu__item"><a href="./assets/routes/${arguments[i]}.html">${arguments[i]}</a></li>`;
+            dynamic_header_html += `<li class="menu__item"><a href="./${arguments[i]}.html">${arguments[i]}</a></li>`;
 
         }
 
@@ -53,13 +53,13 @@ function dynamic_submenu() {
         }
         else {
             dynamic_header_html += `         
-            <li class="submenu__subitem"><a href="./assets/routes/${arguments[j]}.html">Features</a></li>`;
+            <li class="submenu__subitem"><a href="./${arguments[j]}.html">${arguments[j]}</a></li>`;
         }
     }
     dynamic_header_html += `</ul></li>`
 
 }
-dynamic_menu("Home","Features","Price","Contact");
+dynamic_menu("home","features","price","contact");
 dynamic_header.innerHTML = dynamic_header_html;
 
 const toggle = document.querySelector(".menu__navtoggler");
